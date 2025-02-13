@@ -1,24 +1,6 @@
 <template>
     <div class="min-h-screen bg-gray-100" id="main">
-      <!-- Navbar -->
-      <nav class="bg-pink-500 shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
-          <div class="flex items-center">
-            <img src="./assets/media/vinyl_logo_transparent.png" alt="Hero Image" class="w-full md:w-1/2 mt-6 md:mt-0" id="logo" style="width: 100px; height: auto; margin-right: 10px; border-radius: 15px; border: 4px solid grey;">
-            <h1 class="text-2xl font-bold text-black-600">Vinyal Addicts</h1>
-          </div>
-          <ul class="hidden md:flex space-x-6 text-gray-900 text-lg">
-            <li><a href="#" class="hover:text-yellow-500 text-xl">Home</a></li>
-            <li><a href="#" class="hover:text-yellow-500 text-xl">About</a></li>
-            <li><a href="#" class="hover:text-yellow-500 text-xl">Unique LP's</a></li>
-            <li><a href="#" class="hover:text-yellow-500 text-xl">News</a></li> 
-            <li><a href="#" class="hover:text-yellow-500 text-xl">Unique LP Checker</a></li>
-            <li><a href="#" class="hover:text-yellow-500 text-xl">Contact</a></li>
-          </ul>
-          <button class="md:hidden text-gray-700">☰</button>
-        </div>
-      </nav>
-  
+        <Nav></Nav>
       <!-- Form Section -->
       <section class="bg-white py-16">
         <div class="container mx-auto">
@@ -59,5 +41,6 @@
   </template>
   
   <script setup>
+  import Nav from "../components/Nav.vue";
   </script>
   
