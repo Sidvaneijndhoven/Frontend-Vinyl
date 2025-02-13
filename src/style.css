@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+#main
+{
+    background-color: #3A4750;
+}
+
+#logo:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#hero-button:hover
+{
+    color: rgb(237, 131, 209);
+    transform: scale(1.1);
+}
