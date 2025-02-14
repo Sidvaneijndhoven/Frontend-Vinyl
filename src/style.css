@@ -1,5 +1,13 @@
 @import "tailwindcss";
+#main
+{
+    background-color: #F64E8B;
+}
 
+#section:hover
+{
+    transform: scale(0.125);
+}
 #logo:hover
 {
     transform: scale(1.1);

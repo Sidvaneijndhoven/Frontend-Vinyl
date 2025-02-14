@@ -21,10 +21,10 @@
                 <option value="average">Average</option>
                 <option value="poor">Poor</option>
               </select>
-            </div>
+            </div>  
             <div class="mb-4">
-              <label for="comments" class="block text-gray-700 font-semibold">Comments</label>
-              <textarea id="comments" name="comments" rows="4" placeholder="Share any additional comments" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+              <label for="comments" class="block text-gray-700 font-semibold">Describe your LP</label>
+              <textarea id="comments" name="comments" rows="4" placeholder="Describe youre LP in detail" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
             </div>
             <div class="text-center">
               <button type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600">Submit</button>
