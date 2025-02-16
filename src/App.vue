@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-100" id="main">
-    <router-view v-if="$route.path === '/checker' || $route.path === '/Unique'"></router-view>
+    <router-view v-if="['/checker', '/unique', '/contact'].includes($route.path)"></router-view>
     <div class="render" v-else>
     <!-- Navbar -->
       <Nav></Nav>

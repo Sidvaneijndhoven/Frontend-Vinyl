@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../App.vue'  // Adjust path to your Home component
-import Checker from '../components/Checker.vue'  // Adjust path to your Checker component
-import Unique from '../components/Unique.vue'  // Adjust path to your Unique component
+import Home from '../App.vue' 
+import Checker from '../components/Checker.vue'  
+import Unique from '../components/Unique.vue'  
+import Contact from '../components/Contact.vue'
 
 const routes = [
   {
@@ -16,9 +17,14 @@ const routes = [
   }
   ,
   {
-    path: '/uniqeu',
-    name: 'Uniqeu',
+    path: '/unique',
+    name: 'Unique',
     component: Unique
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   },
 ]
 
