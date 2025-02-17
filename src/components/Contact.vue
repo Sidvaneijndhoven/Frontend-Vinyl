@@ -31,6 +31,10 @@
             <button type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600" id="button">Send Message</button>
           </div>
         </form>
+        <h3 class="text-3xl font-bold text-gray-800 text-center mb-8" style="margin-top: 50px;">Find Us Here</h3>
+        <div class="mt-8 flex justify-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6437943525243!2d-0.0779757238716918!3d51.51975070980172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d4a5813272b%3A0x5cece164622283ec!2sVinyl%20Addicts!5e0!3m2!1snl!2snl!4v1739799896193!5m2!1snl!2snl" width="600" height="450" style="border: 5px solid orange; border-radius: 15px; width: 100%; max-width: 600px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <div v-if="submitted" class="mt-8 text-center">
           <h3 class="text-2xl font-bold text-gray-800">Hi! {{ form.name }} you will hear from us soon!</h3>
           <p>Name: {{ form.name }}</p>

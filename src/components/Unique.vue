@@ -1,56 +1,69 @@
 <template>
-   <div class="min-h-screen bg-gray-100" id="main">
-        <Nav></Nav>
-      <!-- Form Section -->
-      <section class="bg-white py-16">
-        <div class="container mx-auto">
-          <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">LP Checker Form</h3>
-          <h2 class="text-3xl font-bold text-gray-800 text-center mb-8" style="font-size: 20px;">Fill in this form for a price range!</h2>
-          <form class="max-w-xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 font-semibold">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"/>
-            </div>
-            <div class="mb-4">
-              <label for="year" class="block text-gray-700 font-semibold">Year</label>
-              <input type="number" id="year" name="year" placeholder="Enter the year" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"/>
-            </div>
-            <div class="mb-4">
-              <label for="limitedEdition" class="block text-gray-700 font-semibold">Limited Edition</label>
-              <input type="checkbox" id="limitedEdition" name="limitedEdition" class="mt-2"/>
-            </div>
-            <div class="mb-4">
-              <label for="lpCondition" class="block text-gray-700 font-semibold">LP Condition</label>
-              <select id="lpCondition" name="lpCondition" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
-                <option value="good">Good</option>
-                <option value="average">Average</option>
-                <option value="poor">Poor</option>
-              </select>
-            </div>  
-            <div class="mb-4">
-              <label for="coverCondition" class="block text-gray-700 font-semibold">Album Cover Condition</label>
-              <select id="coverCondition" name="coverCondition" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
-                <option value="bad">Bad</option>
-                <option value="used">Used</option>
-                <option value="asGoodAsNew">As Good As New</option>
-              </select>
-            </div>
-            <div class="mb-4">
-              <label for="comments" class="block text-gray-700 font-semibold">Describe your LP</label>
-              <textarea id="comments" name="comments" rows="4" placeholder="Describe youre LP in detail" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600">Submit</button>
-            </div>
-          </form>
+  <div class="min-h-screen flex flex-col bg-gray-100" id="unique-page">
+    <Nav></Nav>
+    <!-- Unique LP Section -->
+    <section class="bg-white py-16 flex-grow" style="padding-left: 20px; padding-right: 20px;">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold" style="color: black;">Unique LP's</h3>
+        <p class="text-white-600 mt-2" style="color: black;">Hover for Descriptions</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: orange;">
+            <img id="lpImg1" src="../assets/media/lpPlate.png" alt="LP 1" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">Pink Horizon "Echoes of the Past"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">A dreamy mix of psychedelic rock and vintage vibes, packed with haunting vocals and soaring guitar solos.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: Pink Horizon</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 1975</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: Good</p>
+          </div>
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: #F64E8B;">
+            <img id="lpImg2" src="../assets/media/lpPlate2.png" alt="LP 2" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">Midnight Waves "Neon Reverie"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">A synthwave journey through neon-lit nights, blending retro beats with cinematic soundscapes.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: Midnight Waves</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 1983</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: Excellent</p>
+          </div>
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: #4A5568;">
+            <img id="lpImg3" src="../assets/media/lpPlate.png" alt="LP 3" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">The Rustwood Trio "Dust & Whiskey"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">A raw folk-country album filled with heartfelt storytelling, twangy guitars, and soulful harmonies.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: The Rustwood Trio</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 1990</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: Used</p>
+          </div>
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: orange;">
+            <img id="lpImg4" src="../assets/media/lpPlate2.png" alt="LP 4" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">Aurora Bloom "Celestial Tides"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Ethereal vocals and orchestral melodies create a cosmic, emotional listening experience.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: Aurora Bloom</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 2005</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: As Good As New</p>
+          </div>
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: #F64E8B;">
+            <img id="lpImg5" src="../assets/media/lpPlate.png" alt="LP 5" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">Voltage Riot "Static Revolution"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">A high-energy punk rock explosion with rebellious lyrics and aggressive riffs.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: Voltage Riot</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 2010</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: Good</p>
+          </div>
+          <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: #4A5568;">
+            <img id="lpImg6" src="../assets/media/lpPlate2.png" alt="LP 6" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
+            <h4 class="text-xl font-bold text-black-600">Deep Groove Collective "Funkadelic Vibes"</h4>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Funky basslines and groovy beats that bring the perfect mix of rhythm and soul.</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Artist: Deep Groove Collective</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Year: 2015</p>
+            <p id="desc" class="text-white-600 mt-2" style="color: white;">Condition: Excellent</p>
+          </div>
         </div>
-      </section>
-  
-      <!-- Footer -->
-      <footer class="bg-gray-800 text-white text-center py-6 mt-16">
-        <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
-      </footer>
-    </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
+      <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
+    </footer>
+  </div>
 </template>
 
 <script setup>
