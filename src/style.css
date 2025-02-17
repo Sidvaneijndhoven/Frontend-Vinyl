@@ -2,6 +2,7 @@
 #main
 {
     background-color: #F64E8B;
+    overflow-x: hidden;
 }
 
 #section:hover
@@ -32,4 +33,30 @@ button:hover
 #contact
 {
     background: linear-gradient(90deg, #F64E8B, #F6C90E);
+}
+
+#LPs:hover
+{
+    transform: scale(1.02);
+}
+
+#desc 
+{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+ #LPs:hover #desc 
+{
+    opacity: 1;
+}
+
+#LPs img 
+{
+    transition: transform 0.5s ease; /* Added transition */
+}
+
+#LPs:hover img 
+{
+    transform: rotate(360deg);
 }

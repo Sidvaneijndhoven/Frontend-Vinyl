@@ -8,7 +8,7 @@
                 </router-link>
                 <h1 class="text-2xl font-bold text-black-600">Vinyal Addicts</h1>
             </div>
-            <ul class="hidden md:flex space-x-6 text-gray-900 text-lg">
+            <ul :class="{'hidden': !isMenuOpen, 'block': isMenuOpen, 'md:flex': true}" class="text-gray-900 text-lg md:space-x-6">
                 <router-link to="/home">
                 <li><a class="hover:text-yellow-500 text-xl">Home</a></li>
                 </router-link>
@@ -24,10 +24,17 @@
                     <li><a class="hover:text-yellow-500 text-xl">Contact</a></li>
                 </router-link> 
             </ul>
-            <button class="md:hidden text-gray-700">☰</button>
+            <button @click="toggleMenu" class="md:hidden text-gray-700">☰</button>
         </div>
     </nav>
 
 </template>
 <script setup>
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false);
+
+function toggleMenu() {
+    isMenuOpen.value = !isMenuOpen.value;
+}
 </script>

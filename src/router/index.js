@@ -14,8 +14,7 @@ const routes = [
     path: '/checker',
     name: 'Checker',
     component: Checker
-  }
-  ,
+  },
   {
     path: '/unique',
     name: 'Unique',

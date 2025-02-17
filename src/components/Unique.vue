@@ -1,47 +1,61 @@
 <template>
-  <div class="min-h-screen bg-gray-100" id="unique-page">
-    <Nav></Nav>
-    <!-- Unique LP Section -->
-    <section class="bg-white py-16" style="padding-left: 20px; padding-right: 20px;">
-      <div class="container mx-auto text-center">
-        <h3 class="text-3xl font-bold" style="color: white;">Unique LP's</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-8 mt-8">
-          <div class="p-6 rounded-lg shadow" style="background-color: orange;">
-            <h4 class="text-xl font-bold text-black-600">LP 1</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 1.</p>
-          </div>
-          <div class="p-6 rounded-lg shadow" style="background-color: #F64E8B;">
-            <h4 class="text-xl font-bold text-black-600">LP 2</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 2.</p>
-          </div>
-          <div class="p-6 rounded-lg shadow" style="background-color: #4A5568;">
-            <h4 class="text-xl font-bold text-black-600">LP 3</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 3.</p>
-          </div>
-          <div class="p-6 rounded-lg shadow" style="background-color: orange;">
-            <h4 class="text-xl font-bold text-black-600">LP 4</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 4.</p>
-          </div>
-          <div class="p-6 rounded-lg shadow" style="background-color: #F64E8B;">
-            <h4 class="text-xl font-bold text-black-600">LP 5</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 5.</p>
-          </div>
-          <div class="p-6 rounded-lg shadow" style="background-color: #4A5568;">
-            <h4 class="text-xl font-bold text-black-600">LP 6</h4>
-            <p class="text-white-600 mt-2" style="color: white;">Description of LP 6.</p>
-          </div>
+   <div class="min-h-screen bg-gray-100" id="main">
+        <Nav></Nav>
+      <!-- Form Section -->
+      <section class="bg-white py-16">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">LP Checker Form</h3>
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-8" style="font-size: 20px;">Fill in this form for a price range!</h2>
+          <form class="max-w-xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-semibold">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+            </div>
+            <div class="mb-4">
+              <label for="year" class="block text-gray-700 font-semibold">Year</label>
+              <input type="number" id="year" name="year" placeholder="Enter the year" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+            </div>
+            <div class="mb-4">
+              <label for="limitedEdition" class="block text-gray-700 font-semibold">Limited Edition</label>
+              <input type="checkbox" id="limitedEdition" name="limitedEdition" class="mt-2"/>
+            </div>
+            <div class="mb-4">
+              <label for="lpCondition" class="block text-gray-700 font-semibold">LP Condition</label>
+              <select id="lpCondition" name="lpCondition" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+              </select>
+            </div>  
+            <div class="mb-4">
+              <label for="coverCondition" class="block text-gray-700 font-semibold">Album Cover Condition</label>
+              <select id="coverCondition" name="coverCondition" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                <option value="bad">Bad</option>
+                <option value="used">Used</option>
+                <option value="asGoodAsNew">As Good As New</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="comments" class="block text-gray-700 font-semibold">Describe your LP</label>
+              <textarea id="comments" name="comments" rows="4" placeholder="Describe youre LP in detail" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600">Submit</button>
+            </div>
+          </form>
         </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
-      <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
-    </footer>
-  </div>
+      </section>
+  
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white text-center py-6 mt-16">
+        <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
+      </footer>
+    </div>
 </template>
 
 <script setup>
 import Nav from "./Nav.vue";
+
+
 </script>
 
