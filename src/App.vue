@@ -15,6 +15,35 @@
       <img id="lp-front" src="./assets/media/lpPlate2.png" class="w-1/3 mt-6 md:mt-0 mx-auto md:mx-0 md:ml-8">
     </header>
 
+    <!-- News Slider Section -->
+    <section class="bg-white py-16" style="background-color: #3A4750; padding-left: 20px; padding-right: 20px;">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold " style="color: white;">Latest News</h3>
+        <div class="relative mt-8">
+          <div class="overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+              <div class="min-w-full">
+                <h4 class="text-xl font-bold text-white">News Item 1</h4>
+                <p class="text-white mt-2">Description of news item 1.</p>
+              </div>
+              <div class="min-w-full">
+                <h4 class="text-xl font-bold text-white">News Item 2</h4>
+                <p class="text-white mt-2">Description of news item 2.</p>
+              </div>
+              <div class="min-w-full">
+                <h4 class="text-xl font-bold text-white">News Item 3</h4>
+                <p class="text-white mt-2">Description of news item 3.</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 flex justify-between items-center">
+            <button @click="prevSlide" class="text-white text-8xl">‹</button>
+            <button @click="nextSlide" class="text-white text-8xl">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section class="bg-white py-16" style="background-color: #3A4750; padding-left: 20px; padding-right: 20px;">
       <div class="container mx-auto text-center">
@@ -48,6 +77,19 @@
 import Nav from "./components/Nav.vue";
 import { animate } from "motion";
 import { nextTick } from "vue";
+import { ref } from 'vue';
+
+// news slider
+const currentSlide = ref(0);
+const totalSlides = 3;
+
+function nextSlide() {
+  currentSlide.value = (currentSlide.value + 1) % totalSlides;
+}
+
+function prevSlide() {
+  currentSlide.value = (currentSlide.value - 1 + totalSlides) % totalSlides;
+}
 
 nextTick(() => {
     setTimeout(() => {
