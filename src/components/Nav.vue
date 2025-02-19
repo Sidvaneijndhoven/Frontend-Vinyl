@@ -16,7 +16,9 @@
                 <router-link to="/unique">
                     <li><a class="hover:text-yellow-500 text-xl">Unique LP's</a></li>
                 </router-link>
-                <li><a class="hover:text-yellow-500 text-xl">News</a></li> 
+                <router-link to="/news">
+                    <li><a class="hover:text-yellow-500 text-xl">News</a></li>
+                </router-link>
                 <router-link to="/checker">
                     <li><a class="hover:text-yellow-500 text-xl">Unique LP Checker</a></li>
                 </router-link>

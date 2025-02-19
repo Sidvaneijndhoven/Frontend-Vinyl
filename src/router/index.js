@@ -1,12 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../App.vue' 
-import Checker from '../components/Checker.vue'  
-import Unique from '../components/Unique.vue'  
-import Contact from '../components/Contact.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../App.vue';
+import Checker from '../components/Checker.vue';
+import Unique from '../components/Unique.vue';
+import Contact from '../components/Contact.vue';
+import News from '../components/News.vue';
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -25,11 +26,16 @@ const routes = [
     name: 'Contact',
     component: Contact
   },
-]
+  {
+    path: '/news',
+    name: 'News',
+    component: News
+  }
+];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes
-})
+});
 
-export default router
+export default router;

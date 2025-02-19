@@ -1,6 +1,19 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+body 
+{
+    font-family: 'Roboto Mono', monospace;
+}
+
 #main
 {
+    background-color: #F64E8B;
+    overflow-x: hidden;
+}
+
+.main-page {
     background-color: #F64E8B;
     overflow-x: hidden;
 }
@@ -59,4 +72,16 @@ button:hover
 #LPs:hover img 
 {
     transform: rotate(360deg);
+}
+
+#news
+{
+    background-color: white;
+}
+
+#news-items:hover
+{
+    transform: scale(1.04);
+    color: #F64E8B;
+    cursor: pointer;
 }
