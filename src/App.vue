@@ -70,7 +70,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6 mt-16">
-      <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
+      <p id="footer">&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
     </footer>
     </div>
   </div>

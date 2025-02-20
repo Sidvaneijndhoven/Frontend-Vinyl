@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* FOnt */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 body 
@@ -22,6 +23,7 @@ body
 {
     transform: scale(1.02);
 }
+
 #logo:hover
 {
     transform: scale(1.1);
@@ -118,5 +120,11 @@ button:hover
 #aboutButton:hover
 {
     transform: scale(1.1);
+}
+
+#footer:hover
+{
+    transform: scale(1.02);
+    color: orange;
 }
 

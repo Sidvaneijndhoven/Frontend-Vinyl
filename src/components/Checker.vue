@@ -42,7 +42,7 @@
             <textarea id="comments" name="comments" v-model="form.comments" rows="4" placeholder="Describe your LP in detail" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600">Submit</button>
+            <button @click="showSuccess()" type="submit" class="px-6 py-3 text-white rounded-lg bg-pink-500 hover:bg-pink-600">Submit</button>
           </div>
         </form>
         <!-- Als form is submitted word het resultaat displayed -->
@@ -60,7 +60,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6 mt-16">
-      <p>&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
+      <p id="footer">&copy; 2025 . Vinyl Addicts All Rights Reserved.</p>
     </footer>
   </div>
 </template>
@@ -68,6 +68,13 @@
 <script setup>
 import Nav from "../components/Nav.vue";
 import { ref } from 'vue';
+import { useToast } from "vue-toastification";
+
+const toast = useToast();
+
+const showSuccess = () => {
+  toast.success("Lp Check submitted! You will hear from us soon! 💳💹");
+};
 
 // vars voor de data
 const form = ref({
