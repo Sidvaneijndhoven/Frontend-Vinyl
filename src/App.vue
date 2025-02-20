@@ -8,9 +8,9 @@
     <header class="w-full flex flex-col md:flex-row items-center justify-between px-8 py-20" style="background-color: orange;">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div class="max-w-lg text-center md:text-left">
-          <h2 class="text-4xl font-bold text-gray-800">Welcome to Vinyal Addicts</h2>
+          <h2 class="text-4xl font-bold text-gray-800">Welcome to Vinyal Addict</h2>
           <router-link to="/checker">
-            <button class="mt-6 px-6 py-3 text-white rounded-lg hover:bg-pink-500" style="background-color: #3A4750; cursor: pointer;" id="hero-button">Check you're first LP</button>
+            <button class="mt-6 px-6 py-3 text-white rounded-lg hover:bg-pink-500" style="background-color: #3A4750; cursor: pointer;" id="hero-button">Check you're first LP💽</button>
           </router-link>
         </div>
         <img id="lp-front" src="./assets/media/lpPlate2.png" class="w-1/3 mt-6 md:mt-0 mx-auto md:mx-0 md:ml-8">
