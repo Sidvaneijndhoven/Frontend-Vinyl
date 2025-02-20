@@ -4,6 +4,7 @@ import Checker from '../components/Checker.vue';
 import Unique from '../components/Unique.vue';
 import Contact from '../components/Contact.vue';
 import News from '../components/News.vue';
+import About from '../components/About.vue';
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/news',
     name: 'News',
     component: News
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   }
 ];
 

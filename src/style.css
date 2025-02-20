@@ -85,3 +85,38 @@ button:hover
     color: #F64E8B;
     cursor: pointer;
 }
+
+#hoverNews:hover
+{
+    transform: scale(1.01);
+}
+
+#about-us:hover
+{
+    transform: scale(1.02);
+    color: white;
+}
+
+#about-us1:hover
+{
+    transform: scale(1.02);
+    color: white;
+}
+
+#about-us2:hover
+{
+    transform: scale(1.02);
+    color: white;
+}
+
+#about-us3:hover
+{
+    transform: scale(1.02);
+    color: white;
+}
+
+#aboutButton:hover
+{
+    transform: scale(1.1);
+}
+

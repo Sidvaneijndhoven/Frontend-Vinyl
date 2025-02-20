@@ -1,25 +1,27 @@
 <template>
   <div class="min-h-screen bg-gray-100 font-retro main-page">
-    <router-view v-if="['checker', 'unique', 'contact', 'news'].includes($route.path.replace('/', ''))"></router-view>
+    <router-view v-if="['checker', 'unique', 'contact', 'news', 'about'].includes($route.path.replace('/', ''))"></router-view>
     <div class="render" v-else>
     <!-- Navbar -->
       <Nav></Nav>
     <!-- Hero Section -->
-    <header class="flex flex-col md:flex-row items-center justify-between px-8 py-20 container mx-auto" style="background-color: orange;">
-      <div class="max-w-lg text-center md:text-left">
-        <h2 class="text-4xl font-bold text-gray-800">Welcome to Vinyal Addicts</h2>
-        <router-link to="/checker">
-          <button class="mt-6 px-6 py-3 text-white rounded-lg hover:bg-pink-500" style="background-color: #3A4750; cursor: pointer;" id="hero-button">Check you're first LP</button>
-        </router-link>
+    <header class="w-full flex flex-col md:flex-row items-center justify-between px-8 py-20" style="background-color: orange;">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="max-w-lg text-center md:text-left">
+          <h2 class="text-4xl font-bold text-gray-800">Welcome to Vinyal Addicts</h2>
+          <router-link to="/checker">
+            <button class="mt-6 px-6 py-3 text-white rounded-lg hover:bg-pink-500" style="background-color: #3A4750; cursor: pointer;" id="hero-button">Check you're first LP</button>
+          </router-link>
+        </div>
+        <img id="lp-front" src="./assets/media/lpPlate2.png" class="w-1/3 mt-6 md:mt-0 mx-auto md:mx-0 md:ml-8">
       </div>
-      <img id="lp-front" src="./assets/media/lpPlate2.png" class="w-1/3 mt-6 md:mt-0 mx-auto md:mx-0 md:ml-8">
     </header>
 
     <!-- News Slider Section -->
     <section class="bg-white py-16" style="background-color: #3A4750; padding-left: 20px; padding-right: 20px;">
       <div class="container mx-auto text-center">
         <h3 class="text-3xl font-bold " style="color: white;">Latest News</h3>
-        <div class="relative mt-8">
+        <div class="relative mt-8" ref="newsAni">
           <div class="overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div class="min-w-full">
@@ -48,7 +50,7 @@
     <section class="bg-white py-16" style="background-color: #3A4750; padding-left: 20px; padding-right: 20px;" id="features-section">
       <div class="container mx-auto text-center">
         <h3 class="text-3xl font-bold " style="color: white;">What we offer:</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8" ref="featureID">
           <div class="p-6 rounded-lg shadow section-item" style="background-color: orange;">
             <h4 class="text-xl font-bold text-black-600" id="animationItem">Reliable</h4>
             <p class="text-white-600 mt-2" style="color: white;">Accurate Condition Assessment. Detect scratches, warping, and sound quality issues effortlessly.</p>
@@ -75,11 +77,28 @@
 
 <script setup>
 import Nav from "./components/Nav.vue";
-import { onMounted } from "vue";
-import { animate, inView, stagger } from "motion";
-import { ref } from 'vue';
+import { onMounted, ref } from "vue";
+import { animate } from "motion";
+import { useIntersectionObserver } from "@vueuse/core";
 
-// news slider
+// maakt een ref aan voor de animiatie 
+const featureID = ref(null); 
+const newsAni = ref(null);
+
+// om de animatie te laten zien
+useIntersectionObserver(featureID, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(featureID.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 1.5, easing: "ease-out" });
+  }
+});
+
+useIntersectionObserver(newsAni, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(newsAni.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 1, easing: "ease-out" });
+  }
+});
+
+// News slider
 const currentSlide = ref(0);
 const totalSlides = 3;
 
@@ -94,29 +113,14 @@ function prevSlide() {
 onMounted(() => {
   setTimeout(() => {
     animate("#lp-front", { y: [-300, 0], duration: 2, easing: "ease-in-out" });
-  }, 1500);  
+  }, 1500);
 
   setTimeout(() => {
     animate("#lp-front", { rotate: 360 }, { duration: 2, easing: "ease" });
-  }, 1600);  
-
-  // later fixen
-  inView("#features-section", ({ target }) => {
-    if (target) {
-      console.log("In view:", target);
-      animate(target.querySelectorAll('.section-item'), {
-        opacity: [0, 1],
-        y: [100, 0],
-        duration: 1,
-        easing: "ease-in-out",
-        delay: stagger(0.2)
-      });
-    } else {
-      console.error("Target is undefined");
-    }
   });
 });
 </script>
+
 
 
 

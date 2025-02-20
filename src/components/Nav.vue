@@ -12,7 +12,9 @@
                 <router-link to="/home">
                 <li><a class="hover:text-yellow-500 text-xl">Home</a></li>
                 </router-link>
-                <li><a class="hover:text-yellow-500 text-xl">About</a></li>
+                <router-link to="/about">
+                    <li><a class="hover:text-yellow-500 text-xl">About Us</a></li>
+                </router-link>
                 <router-link to="/unique">
                     <li><a class="hover:text-yellow-500 text-xl">Unique LP's</a></li>
                 </router-link>
