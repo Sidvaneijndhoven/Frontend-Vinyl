@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col" id="main" style="background-color: #FFA500;">
     <Nav></Nav>
+    <!-- For loop voor de news items -->
     <h2 class="text-3xl font-bold text-center mb-8" style="margin-top: 50px;">Latest News</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin: 0px 15px 0px 15px ">
       <div v-for="(news, index) in newsItems" :key="index" class="bg-white p-4 rounded-lg shadow-md" id="news-items">
@@ -30,6 +31,7 @@ import news4 from '../assets/media/company-rating.png';
 import news5 from '../assets/media/lpPlate2.png';
 import news6 from '../assets/media/lpPlate4.png';
 
+// Data voor de news items
 const newsItems = ref([
   {
     image: news1,
@@ -69,8 +71,8 @@ const newsItems = ref([
   }
 ]);
 
+// Animatie voor de news items
 onMounted(() => {
-
   setTimeout(() => {
     animate("#news-items", { x: [-600, 0], duration: 2, ease: "ease-in-out" });
   }, 1500);  

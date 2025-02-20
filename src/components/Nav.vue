@@ -8,21 +8,23 @@
                 </router-link>
                 <h1 class="text-2xl font-bold text-black-600">Vinyal Addicts</h1>
             </div>
+            <!-- Hamburger menu -->
             <ul :class="{'hidden': !isMenuOpen, 'block': isMenuOpen, 'md:flex': true}" class="text-gray-900 text-lg md:space-x-6">
+                <!-- Router link voor de navigatie -->
                 <router-link to="/home">
-                <li><a class="hover:text-yellow-500 text-xl">Home</a></li>
+                <li><a class="hover:text-yellow-500 text-xl">Home -</a></li>
                 </router-link>
                 <router-link to="/about">
-                    <li><a class="hover:text-yellow-500 text-xl">About Us</a></li>
+                    <li><a class="hover:text-yellow-500 text-xl">About Us -</a></li>
                 </router-link>
                 <router-link to="/unique">
-                    <li><a class="hover:text-yellow-500 text-xl">Unique LP's</a></li>
+                    <li><a class="hover:text-yellow-500 text-xl">Unique LP's -</a></li>
                 </router-link>
                 <router-link to="/news">
-                    <li><a class="hover:text-yellow-500 text-xl">News</a></li>
+                    <li><a class="hover:text-yellow-500 text-xl">News -</a></li>
                 </router-link>
                 <router-link to="/checker">
-                    <li><a class="hover:text-yellow-500 text-xl">Unique LP Checker</a></li>
+                    <li><a class="hover:text-yellow-500 text-xl">Unique LP Checker -</a></li>
                 </router-link>
                 <router-link to="/contact">
                     <li><a class="hover:text-yellow-500 text-xl">Contact</a></li>

@@ -7,6 +7,7 @@
         <h3 class="text-3xl font-bold" style="color: black;">Unique LP's</h3>
         <p class="text-white-600 mt-2" style="color: black;">Hover for Descriptions</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          <!-- LPs -->
           <div id="LPs" class="p-6 rounded-lg shadow" style="background-color: orange;">
             <img id="lpImg1" src="../assets/media/lpPlate.png" alt="LP 1" class="w-1/2 h-auto mb-4 mx-auto rounded-lg">
             <h4 class="text-xl font-bold text-black-600">Pink Horizon "Echoes of the Past"</h4>
@@ -68,7 +69,6 @@
 
 <script setup>
 import Nav from "./Nav.vue";
-
 
 </script>
 

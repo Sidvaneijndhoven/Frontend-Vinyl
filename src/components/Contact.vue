@@ -6,9 +6,11 @@
     <section class="flex-1 bg-white py-16 px-4 md:px-0" id="contact"> 
       <div class="container mx-auto">
         <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">Contact Us Here</h3>
+        <!-- Form verzenden -->
         <form @submit.prevent="handleSubmit" class="max-w-xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-semibold">Name</label>
+            <!-- V-model om een form gemakkelijk werkend te maken -->
             <input type="text" id="name" name="name" v-model="form.name" placeholder="Enter your name" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" />
           </div>
           <div class="mb-4">

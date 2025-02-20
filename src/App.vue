@@ -50,9 +50,10 @@
     <section class="bg-white py-16" style="background-color: #3A4750; padding-left: 20px; padding-right: 20px;" id="features-section">
       <div class="container mx-auto text-center">
         <h3 class="text-3xl font-bold " style="color: white;">What we offer:</h3>
+        <!-- Ref voor de inview animatie -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8" ref="featureID">
           <div class="p-6 rounded-lg shadow section-item" style="background-color: orange;">
-            <h4 class="text-xl font-bold text-black-600" id="animationItem">Reliable</h4>
+            <h4 class="text-xl font-bold text-black-600">Reliable</h4>
             <p class="text-white-600 mt-2" style="color: white;">Accurate Condition Assessment. Detect scratches, warping, and sound quality issues effortlessly.</p>
           </div>
           <div class="p-6 rounded-lg shadow" style="background-color: #F64E8B;" id="section">
@@ -118,6 +119,11 @@ onMounted(() => {
   setTimeout(() => {
     animate("#lp-front", { rotate: 360 }, { duration: 2, easing: "ease" });
   });
+
+  // gaat om de 5 seconden naar de volgende slide
+  setInterval(() => {
+    nextSlide();
+  }, 5000);
 });
 </script>
 
