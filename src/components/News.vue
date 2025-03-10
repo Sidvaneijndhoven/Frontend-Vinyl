@@ -3,7 +3,7 @@
     <Nav></Nav>
     <!-- For loop voor de news items -->
     <h2 class="text-3xl font-bold text-center mb-8" style="margin-top: 50px;">Latest News</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin: 0px 15px 0px 15px ">
+    <div class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin: 0px 15px 0px 15px ">
       <div v-for="(news, index) in newsItems" :key="index" class="bg-white p-4 rounded-lg shadow-md" id="news-items">
         <img @click="showError()" :src="news.image" alt="News Image" class="w-full h-32 object-cover rounded-lg mb-2">
         <h3 class="text-lg font-semibold mb-1">{{ news.title }}</h3>
@@ -97,6 +97,9 @@ onMounted(() => {
 }
 .news-page {
   background-color: white;
+}
+.flex-grow {
+  flex-grow: 1;
 }
 </style>
 
