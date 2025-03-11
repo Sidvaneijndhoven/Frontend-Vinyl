@@ -47,7 +47,7 @@ button:hover
 
 #contact
 {
-    background: linear-gradient(90deg, #F64E8B, #F6C90E);
+    background: linear-gradient(360deg, #f77aa8, #F6C90E);
 }
 
 #LPs:hover
@@ -97,24 +97,28 @@ button:hover
 {
     transform: scale(1.02);
     color: white;
+    cursor: pointer;
 }
 
 #about-us1:hover
 {
     transform: scale(1.02);
     color: white;
+    cursor: pointer;
 }
 
 #about-us2:hover
 {
     transform: scale(1.02);
     color: white;
+    cursor: pointer;
 }
 
 #about-us3:hover
 {
     transform: scale(1.02);
     color: white;
+    cursor: pointer;
 }
 
 #aboutButton:hover

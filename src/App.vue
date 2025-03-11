@@ -52,7 +52,7 @@
         <h3 class="text-3xl font-bold " style="color: white;">What we offer:</h3>
         <!-- Ref voor de inview animatie -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8" ref="featureID">
-          <div class="p-6 rounded-lg shadow section-item" style="background-color: orange;">
+          <div class="p-6 rounded-lg shadow section-item" style="background-color: orange;" id="section">
             <h4 class="text-xl font-bold text-black-600">Reliable</h4>
             <p class="text-white-600 mt-2" style="color: white;">Accurate Condition Assessment. Detect scratches, warping, and sound quality issues effortlessly.</p>
           </div>

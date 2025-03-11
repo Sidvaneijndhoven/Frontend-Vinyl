@@ -9,11 +9,11 @@
               <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
               <p class="text-gray-700">At Vinyl Addicts, our mission is to provide the best quality vinyl records and accessories to our customers. We are passionate about music and strive to offer a wide selection of vinyl records from various genres and eras.</p>
             </div>
-            <div class="bg-orange-500 p-6 rounded-lg shadow-md" id="about-us1">
+            <div class="bg-orange-500 p-6 rounded-lg shadow-md" id="about-us1" style="background-color: #FFA500;">
               <h3 class="text-xl font-semibold mb-4">Our Story</h3>
               <p class="text-gray-700">Vinyl Addicts was founded in 2020 by a group of music enthusiasts who wanted to share their love for vinyl records with the world. Since then, we have grown into a thriving community of vinyl collectors and music lovers.</p>
             </div>
-            <div class="bg-orange-500 p-6 rounded-lg shadow-md" id="about-us2">
+            <div class="bg-orange-500 p-6 rounded-lg shadow-md" id="about-us2" style="background-color: #FFA500;">
               <h3 class="text-xl font-semibold mb-4">Our Team</h3>
               <p class="text-gray-700">Our team is made up of dedicated individuals who are passionate about music and vinyl records. We are committed to providing excellent customer service and helping our customers find the perfect vinyl records for their collection.</p>
             </div>
