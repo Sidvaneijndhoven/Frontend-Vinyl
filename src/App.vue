@@ -1,3 +1,4 @@
+<!-- User: Sid van Eijndhoven -->
 <template>
   <div class="min-h-screen bg-gray-100 font-retro main-page">
     <router-view v-if="['checker', 'unique', 'contact', 'news', 'about'].includes($route.path.replace('/', ''))"></router-view>
