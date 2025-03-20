@@ -78,6 +78,7 @@
 </template>
 
 <script setup>
+// Import libraries
 import Nav from "./components/Nav.vue";
 import { onMounted, ref } from "vue";
 import { animate } from "motion";
